@@ -348,7 +348,18 @@ header .logo {
   padding-bottom: 94px;
 }
 
-.section-scope .container .scope-content {
+.section-scope .scope-title {
+  margin-top: 0;
+  margin-bottom: 50px;
+
+  color: var(--primary-heading-color);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+}
+
+.section-scope .scope-content {
   display: flex;
   padding-left: 0;
   justify-content: space-between;
@@ -362,15 +373,36 @@ header .logo {
   margin-left: 0;
 }
 
-.section-scope .scope-title {
-  margin-top: 0;
-  margin-bottom: 50px;
+.item-thumb {
+  position: relative;
+}
 
-  color: var(--primary-heading-color);
+.item-thumb::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 70px;
+  left: 0;
+  bottom: 0;
+
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
+.scope-content .content-item-text {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+
+  margin: 0;
+
+  font-family: 'Roboto';
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--text-change-color);
 }
 
 /* наша команда */
@@ -599,6 +631,51 @@ img {
 .cards-info .card .card-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.cards-info .card .card-thumb {
+  position: relative;
+}
+
+.cards-info .card .card-thumb::before {
+  display: inline-block;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  opacity: 0;
+
+  background-color: rgba(33, 150, 243, 0.9);
+}
+
+.cards-info .card .card-thumb .thumb-text {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(0%, -50%);
+
+  margin-top: 0;
+  margin-bottom: 0;
+
+  width: 100%;
+  height: 100%;
+
+  opacity: 0;
+
+  font-size: 16px;
+  line-height: 1.9;
+  color: var(--primary-text-color);
+}
+
+/* .cards-info .card .card-thumb:hover {
+  opacity: 1;
+} */
+.cards-info .card .card-thumb:hover::before,
+.cards-info .card .card-thumb .thumb-text:hover {
+  opacity: 1;
 }
 
 .card-content {
