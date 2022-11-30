@@ -321,11 +321,9 @@ header .logo {
   border-radius: 4px;
   border: none;
 }
-/* .section-greeting .button:hover,
+.section-greeting .button:hover,
 .section-greeting .button:focus {
-  background-color: var(--accent-color);
-  color: var(--text-change-color);
-} */
+}
 
 /* особенности */
 
@@ -717,7 +715,7 @@ img {
 }
 
 .cards-info .card .card-link:hover .overlay,
-.cards-info .card .card-link:focus .overlay .cards-info .card .card-thumb:hover .overlay {
+.cards-info .card .card-link:focus .overlay {
   transform: translatey(0);
 }
 
